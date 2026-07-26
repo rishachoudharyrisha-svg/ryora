@@ -1,0 +1,3 @@
+import { Schema, model } from "mongoose";
+const generationSchema = new Schema({ userId: { type: Schema.Types.ObjectId, required: true, index: true }, videoId: Schema.Types.ObjectId, originalPrompt: { type: String, required: true }, enhancedPrompt: { type: String, required: true }, finalPrompt: { type: String, required: true }, style: { type: String, required: true }, duration: { type: Number, required: true }, aspectRatio: { type: String, required: true }, status: { type: String, required: true }, provider: { type: String, required: true }, error: String }, { timestamps: true });
+export const GenerationModel = model("Generation", generationSchema);
