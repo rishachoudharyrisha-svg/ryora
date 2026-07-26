@@ -1,4 +1,4 @@
-# Kyora
+# Ryora
 
 AI text-to-animated-video platform. This repository is a TypeScript workspace with a Vite/React client and an Express API.
 

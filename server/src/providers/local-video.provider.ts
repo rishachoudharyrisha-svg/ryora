@@ -1,9 +1,9 @@
 import { env } from "../config/env.js";
 import type { IVideoProvider } from "./contracts.js";
 
-/** Free development provider backed by media bundled with the Kyora client. */
-export class MockVideoProvider implements IVideoProvider {
-  readonly name = "mock-local";
+/** Public demo-media provider backed by the Kyora frontend deployment. */
+export class LocalVideoProvider implements IVideoProvider {
+  readonly name = "local-demo";
 
   async generate(): Promise<{ url: string; thumbnailUrl: string; provider: string }> {
     const origin = env.CLIENT_ORIGIN.replace(/\/$/, "");
