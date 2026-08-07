@@ -4,7 +4,7 @@ AI text-to-animated-video platform. This repository is a TypeScript workspace wi
 
 ## Getting started
 
-1. Copy `server/.env.example` to `server/.env`. A `JWT_SECRET` is required; MongoDB Atlas and Gemini are required in production. In local development, the API falls back to temporary in-memory repositories and prompt enhancement when they are absent.
+1. Copy `backend/.env.example` to `backend/.env`. A `JWT_SECRET` is required; MongoDB Atlas and Gemini are required in production. In local development, the API falls back to temporary in-memory repositories and prompt enhancement when they are absent.
 2. Run `npm install` at the repository root.
 3. Start both applications with `npm run dev`.
 

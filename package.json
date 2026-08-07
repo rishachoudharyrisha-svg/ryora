@@ -1,14 +1,17 @@
 {
-  "name": "kyora",
+  "name": "ryora",
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace client\" \"npm run dev --workspace server\"",
-    "build": "npm run build --workspace client && npm run build --workspace server",
-    "typecheck": "npm run typecheck --workspace client && npm run typecheck --workspace server",
-    "lint": "npm run lint --workspace client && npm run lint --workspace server"
+    "dev": "concurrently -n frontend,backend -c cyan,magenta \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspace frontend && npm run build --workspace backend",
+    "start": "npm run start --workspace backend",
+    "typecheck": "npm run typecheck --workspace frontend && npm run typecheck --workspace backend",
+    "lint": "npm run lint --workspace frontend && npm run lint --workspace backend"
   },
-  "workspaces": ["client", "server"],
+  "workspaces": ["frontend", "backend"],
   "devDependencies": {
     "concurrently": "^9.1.2"
   }
